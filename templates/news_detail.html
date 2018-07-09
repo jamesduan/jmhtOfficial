@@ -28,22 +28,22 @@
         <div class="home-header-nav">
             <ul>
                 <li>
-                    <a class="" title="" href="./index.html">首页</a>
+                    <a class="" title="" href="/index">首页</a>
                 </li>
                 <li>
-                    <a class="" title="" href="./aboutus.html">关于</a>
+                    <a class="" title="" href="/aboutus">关于</a>
                 </li>
                 <li>
-                    <a class="active" title="" href="./news.html">资讯</a>
+                    <a class="active" title="" href="/news">资讯</a>
                 </li>
                 <li>
-                    <a title="" href="./product.html">产品</a>
+                    <a title="" href="/product">产品</a>
                 </li>
                 <li>
-                    <a title="" href="./joinus.html">合作</a>
+                    <a title="" href="/joinus">合作</a>
                 </li>
                 <li>
-                    <a title="" href="./contact.html">联系</a>
+                    <a title="" href="/contact">联系</a>
                 </li>
             </ul>
         </div>
@@ -56,23 +56,14 @@
     <div class="card w1060" style="padding-top: 41px; padding-bottom: 64px;">
         <div class="new-detail" id="news01">
             <p class="fftitle tec">
-                5月捷报连连，多家商户选择与九亩花田喜结连理
+               {{ article.title }} 
             </p>
             <p class="fface fs16 tel ti" style="margin-top: 40px;">
-                家有梧桐树，自有凤来栖。五月份以来，本源健康产业有限公司旗下新茶饮品牌九亩花田，
-                迎来了多位城市合伙人签约合作，这是九亩花田开拓茶饮市场迈出的稳健的第一步，
-                未来九亩花田将创造更大的商业价值。
-            </p>
-            <p class="fface fs16 tel ti">
-                九亩花田新中式茶饮，提倡轻奢主义，以简约于形，时尚于心为产品内核，向用户传达崇尚真心、真性的品牌内涵。
-                在产品打造上，九亩花田依托母公司本源丰富的原茶资源，全国独家自有1200平米茶饮技术研发中心，
-                30名独立技术研发团队，以实力和匠心创造产品，九亩花田的茶饮现萃高山茶汁，严控天然水果食材，
-                进口鲜乳制品，优质雪芝奶盖和酸奶采用混萃技术，茶、奶、果的多元高颜值融合，外加营养健康软欧包，
-                为消费者制造与美味相遇的美好时光。九亩花田以健康、优质和差异化开启新中式茶饮5.0时代。
+                {{ article.content }}
             </p>
         </div>
 
-        <div class="new-detail" id="news02" style="margin-top: 100px;">
+        <!-- <div class="new-detail" id="news02" style="margin-top: 100px;">
             <p class="fftitle tec">
                 新人没经验？教你如何正确地开一家奶茶店
             </p>
@@ -173,7 +164,7 @@
                 <p class="fface fs16 tel ti">
                     答案茶主要有：解忧答案茶、悠心暖茶、无惑纯茶、甜心果茶、倾心奶茶、童心萌茶。
                 </p>
-        </div>
+        </div> -->
     </div>
     <div class="home-footer bgfff">
             <p class="fs16">广州本源健康产业有限公司 ©2008-2018 <a href="http://www.miitbeian.gov.cn/">粤ICP备12042485号-3</a></p>
