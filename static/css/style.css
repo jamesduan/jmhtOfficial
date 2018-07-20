@@ -114,6 +114,7 @@ input[type='button']{font-family:'microsoft yahei','Hiragino Sans GB',Tahoma,Ver
 .tabs { height: 84px; margin: 0 auto; position: relative;}
 .tabs .tab-item { margin-left: 20px; margin-right: 20px; position: absolute; top: 37px;}
 .tabs .tab-item div { float: left; text-align: center; font-size: 24px; letter-spacing: 0; line-height: 28px; margin-right: 10px; cursor: pointer; height: 50px; width: 160px;}
+/* .tabs .tab-item a { float: left; text-align: center; font-size: 24px; letter-spacing: 0; line-height: 28px; margin-right: 10px; cursor: pointer; height: 50px; width: 160px;} */
 .tabs .tab-item .active { border-bottom: 2px solid #eaaf37; color: #eaaf37; cursor: pointer;}
 .card { background: #fff; height: auto; margin: 0 auto; margin-top: 51px; padding-left: 40px; padding-right: 40px; margin-bottom: 81px;}
 
@@ -139,3 +140,11 @@ input[type='button']{font-family:'microsoft yahei','Hiragino Sans GB',Tahoma,Ver
 #advantage .text { margin-top: 10px; }
 
 #support p { margin-top: 20px; }
+
+/* .slid-list2{display:inline-block;overflow:hidden;width:1000px;margin:0 auto;} */
+/* .slid-list2 ul{width:10000px;} */
+/* .slid-list2 ul li{float:left;width:220px;margin:0 15px;} */
+/* .slid-list2 ul li span{display:block;overflow:hidden;width:220px;height:220px;} */
+/* .slid-list2 ul li span img{width: 220px; height: 220px;} */
+/* .slid-list2 ul li span:hover img{-webkit-transform:scale(1.05);} */
+/* .slid-list2 ul li p{font-size:16px;line-height:28px;margin-top:15px;text-align:center;} */

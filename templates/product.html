@@ -8,14 +8,16 @@
     <meta name="robots" content="all">
     <meta name="renderer" content="webkit">
     <title>九亩花田官网</title>
-    <meta name="Keywords" content="九亩花田，九亩花田官网，九亩花田品牌官网，九亩花田加盟，奶茶店加盟，答案茶加盟，九亩花田答案茶，九亩花田答案茶加盟，茶饮店加盟，茶饮软欧包，茶饮软欧包加盟，奶茶加盟店，奶茶品牌加盟，奶茶店加盟哪个品牌好，奶茶店加盟哪个好，九亩花田脏脏茶，怎么开奶茶店，奶茶品牌哪个好" />
-    <meta name="Description" content="九亩花田，九亩花田官网，九亩花田品牌官网，九亩花田加盟，奶茶店加盟，答案茶加盟，九亩花田答案茶，九亩花田答案茶加盟，茶饮店加盟，茶饮软欧包，茶饮软欧包加盟，奶茶加盟店，奶茶品牌加盟，奶茶店加盟哪个品牌好，奶茶店加盟哪个好，九亩花田脏脏茶，怎么开奶茶店，奶茶品牌哪个好" />
+    <meta name="Keywords" content="九亩花田，九亩花田官网，九亩花田品牌官网，九亩花田加盟，奶茶店加盟，答案茶加盟，九亩花田答案茶，九亩花田答案茶加盟，茶饮店加盟，茶饮软欧包，茶饮软欧包加盟，奶茶加盟店，奶茶品牌加盟，奶茶店加盟哪个品牌好，奶茶店加盟哪个好，九亩花田脏脏茶，怎么开奶茶店，奶茶品牌哪个好"
+    />
+    <meta name="Description" content="九亩花田，九亩花田官网，九亩花田品牌官网，九亩花田加盟，奶茶店加盟，答案茶加盟，九亩花田答案茶，九亩花田答案茶加盟，茶饮店加盟，茶饮软欧包，茶饮软欧包加盟，奶茶加盟店，奶茶品牌加盟，奶茶店加盟哪个品牌好，奶茶店加盟哪个好，九亩花田脏脏茶，怎么开奶茶店，奶茶品牌哪个好"
+    />
     <!--<link rel="shortcut icon" href="favicon.ico" />-->
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     <script src="/static/js/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/static/js/slides.js" type="text/javascript" charset="utf-8"></script>
     <script src="/static/js/rslide.js" type="text/javascript" charset="utf-8"></script>
-    <script>(function() {var _53code = document.createElement("script");_53code.src = "https://tb.53kf.com/code/code/10173852/1";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();</script>
+    <script>(function () { var _53code = document.createElement("script"); _53code.src = "https://tb.53kf.com/code/code/10173852/1"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s); })();</script>
 </head>
 
 <body>
@@ -55,158 +57,144 @@
 
     <div class="tabs w1060">
         <div class="tab-item">
-            <div id="product_tea">茶饮系列</div>
-            <div id="product_bread">软欧包系列</div>
+            <!-- <div id="product_tea">茶饮系列</div>
+            <div id="product_bread">软欧包系列</div> -->
+            {% for cate in categories %} {% if cate.active %}
+            <div id="" class=" active" onclick="location.href='/product/?category_id={{cate.id}}';">{{cate.name}}</div>
+            {% else %}
+            <div id="" class="" onclick="location.href='/product/?category_id={{cate.id}}';">{{cate.name}}</div>
+            {% endif %} {% endfor %}
         </div>
     </div>
     <div class="card w1060" id="tea" style="padding-top: 40px; padding-bottom: 40px;">
-            
-            <div class="slid-list" id="slid2">
-                <div class="tec fs20">解忧答案茶</div>
-                <div class="tec" style="font-family: STSongti-SC-Light;font-size: 16px;color: #999999;letter-spacing: 0;line-height: 28px;">JIEYOUDAANCHA</div>
 
-                    <ul class="clearfix" style="margin-top: 20px;">
-                        <li>
-                            <span>
-                                    <img class="linear" src="/static/images/p07.jpg" alt="">
-                            </span>
-                            <p>四季春霜降</p>
-                        </li>
-                        <li>
-                            <span>
-                                        <img class="linear" src="/static/images/p03.jpg" alt="">
-                                </span>
-                            <p>桃香乌龙霜降</p>
-                        </li>
-                        <li>
-                            <span>
-                                            <img class="linear" src="/static/images/p07.jpg" alt="">
-                                    </span>
-                            <p>玫瑰乌龙霜降</p>
-                        </li>
-                        <li>
-                            <span>
-                                                <img class="linear" src="/static/images/p06.jpg" alt="">
-                                        </span>
-                            <p>油切乌龙霜降</p>
-                        </li>
-                    </ul>
-            </div>
+        {% for pro in product_list %}
+        <div class="slid-list2" style="margin-bottom: 40px;">
+            <div class="tec fs20">{{pro.set_name}}</div>
+            <div class="tec" style="font-family: STSongti-SC-Light;font-size: 16px;color: #999999;letter-spacing: 0;line-height: 28px;">{{pro.set_en_name}}</div>
 
-            <div class="slid-list" id="slid2" style="margin-top: 40px;">
-                <div class="tec fs20">鲜果物语</div>
-                <div class="tec" style="font-family: STSongti-SC-Light;font-size: 16px;color: #999999;letter-spacing: 0;line-height: 28px;">XIANGUOWUYU</div>
+            <!-- <ul class="" style="margin-top: 20px;"> -->
+            <ul style="margin-top: 20px;">
+                {% for p in pro.products %}
+                <li style="display: inline-block; width: 24.5%;margin-bottom: 20px;" class="tec">
+                    <img class="" src="{{ p.src }}" alt="" style="width: 220px;height: 220px;">
+                    <p style="font-size:16px;line-height:28px;margin-top:15px;">{{p.name}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
 
-                    <ul class="clearfix" style="margin-top: 20px;">
-                        <li>
-                            <span>
-                                    <img class="linear" src="/static/images/pnew01.jpg" alt="">
-                            </span>
-                            <p>柠檬初上</p>
-                        </li>
-                        <li>
-                            <span>
-                                        <img class="linear" src="/static/images/pnew02.jpg" alt="">
-                                </span>
-                            <p>秋来百香</p>
-                        </li>
-                        <li>
-                            <span>
-                                            <img class="linear" src="/static/images/pnew03.jpg" alt="">
-                                    </span>
-                            <p>秦淮金柠</p>
-                        </li>
-                        <li>
-                            <span>
-                                                <img class="linear" src="/static/images/pnew04.jpg" alt="">
-                                        </span>
-                            <p>烟雨微芒</p>
-                        </li>
-                    </ul>
-            </div>
+        <!-- <div class="slid-list" id="slid2" style="margin-top: 40px;">
+            <div class="tec fs20">鲜果物语</div>
+            <div class="tec" style="font-family: STSongti-SC-Light;font-size: 16px;color: #999999;letter-spacing: 0;line-height: 28px;">XIANGUOWUYU</div>
 
+            <ul class="clearfix" style="margin-top: 20px;">
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/pnew01.jpg" alt="">
+                    </span>
+                    <p>柠檬初上</p>
+                </li>
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/pnew02.jpg" alt="">
+                    </span>
+                    <p>秋来百香</p>
+                </li>
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/pnew03.jpg" alt="">
+                    </span>
+                    <p>秦淮金柠</p>
+                </li>
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/pnew04.jpg" alt="">
+                    </span>
+                    <p>烟雨微芒</p>
+                </li>
+            </ul>
+        </div> -->
 
-            <div class="slid-list" id="slid2" style="margin-top: 40px;">
-                <div class="tec fs20">网说新茶</div>
-                <div class="tec" style="font-family: STSongti-SC-Light;font-size: 16px;color: #999999;letter-spacing: 0;line-height: 28px;">WANGSHUOXINCHA</div>
+<!-- 
+        <div class="slid-list" id="slid2" style="margin-top: 40px;">
+            <div class="tec fs20">网说新茶</div>
+            <div class="tec" style="font-family: STSongti-SC-Light;font-size: 16px;color: #999999;letter-spacing: 0;line-height: 28px;">WANGSHUOXINCHA</div>
 
-                    <ul class="clearfix" style="margin-top: 20px;">
-                        <li>
-                            <span>
-                                    <img class="linear" src="/static/images/pnew05.jpg" alt="">
-                            </span>
-                            <p>小确幸</p>
-                        </li>
-                        <li>
-                            <span>
-                                        <img class="linear" src="/static/images/pnew06.jpg" alt="">
-                                </span>
-                            <p>小青柑</p>
-                        </li>
-                        <li>
-                            <span>
-                                            <img class="linear" src="/static/images/pnew07.jpg" alt="">
-                                    </span>
-                            <p>隐藏奶茶</p>
-                        </li>
-                        <li>
-                            <span>
-                                                <img class="linear" src="/static/images/pnew08.jpg" alt="">
-                                        </span>
-                            <p>炫彩假日</p>
-                        </li>
-                    </ul>
-            </div>
-            
+            <ul class="clearfix" style="margin-top: 20px;">
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/pnew05.jpg" alt="">
+                    </span>
+                    <p>小确幸</p>
+                </li>
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/pnew06.jpg" alt="">
+                    </span>
+                    <p>小青柑</p>
+                </li>
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/pnew07.jpg" alt="">
+                    </span>
+                    <p>隐藏奶茶</p>
+                </li>
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/pnew08.jpg" alt="">
+                    </span>
+                    <p>炫彩假日</p>
+                </li>
+            </ul>
+        </div>  -->
+
     </div>
 
-    <div class="card w1060" id="bread" style="padding-top: 40px; padding-bottom: 40px;">
+    <!-- <div class="card w1060" id="bread" style="padding-top: 40px; padding-bottom: 40px;">
 
         <div class="slid-list" id="slid2" style="margin-top: 40px;">
 
-                    <ul class="clearfix" style="margin-top: 20px;">
-                        <li>
-                            <span>
-                                    <img class="linear" src="/static/images/r01.jpg" alt="">
-                            </span>
-                            <!-- <p>水果奶盖</p> -->
-                        </li>
-                        <li>
-                            <span>
-                                    <img class="linear" src="/static/images/r03.jpg" alt="">
-                            </span>
-                            <!-- <p>水果奶盖</p> -->
-                        </li>
-                        <li>
-                            <span>
-                                <img class="linear" src="/static/images/r02.jpg" alt="">
-                            </span>
-                            <!-- <p>水果奶盖</p> -->
-                        </li>
-                        <li>
-                            <span>
-                                <img class="linear" src="/static/images/r04.jpg" alt="">
-                            </span>
-                                <!-- <p>水果奶盖</p> -->
-                        </li>
-                    </ul>
+            <ul class="clearfix" style="margin-top: 20px;">
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/r01.jpg" alt="">
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/r03.jpg" alt="">
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/r02.jpg" alt="">
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <img class="linear" src="/static/images/r04.jpg" alt="">
+                    </span>
+                </li>
+            </ul>
         </div>
-    </div>
+    </div> -->
 
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             //  init
             $('#product_tea').addClass('active')
             $('#bread').hide()
 
-            $('#product_tea').click(function() {
+            $('#product_tea').click(function () {
                 $('#product_tea').removeClass('active')
                 $('#product_bread').removeClass('active')
                 $(this).addClass('active')
                 $('#tea').show()
                 $('#bread').hide()
             })
-            $('#product_bread').click(function() {
+            $('#product_bread').click(function () {
                 $('#product_tea').removeClass('active')
                 $('#product_bread').removeClass('active')
                 $(this).addClass('active')
@@ -216,7 +204,9 @@
             })
         })
     </script>
-   <div class="home-footer bgfff">
-        <p class="fs16">广州本源健康产业有限公司 ©2008-2018 <a href="http://www.miitbeian.gov.cn/">粤ICP备12042485号-3</a></p>
+    <div class="home-footer bgfff">
+        <p class="fs16">广州本源健康产业有限公司 ©2008-2018
+            <a href="http://www.miitbeian.gov.cn/">粤ICP备12042485号-3</a>
+        </p>
     </div>
 </body>
